@@ -15,8 +15,11 @@ isn't always a bad thing as long as you properly do it.
 ##### I strongly recommend you learn how to do this, and experimint with different amounts of pages so you learn more about the way it saves you time. 
 
 ###### It also helps the future developer who might be brought in on your code from getting a huge headache,
+
 looking at your ten imports on each page condence your code for your future self,
+
 so you dont get a headache from all the wasted amount of time,
+
 you took scrolling past your ten imports at the top of the page...
 
 # (: LOL :)
