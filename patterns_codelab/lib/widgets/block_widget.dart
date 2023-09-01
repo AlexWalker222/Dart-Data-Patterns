@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:flutter/foundation.dart';
 import 'package:patterns_codelab/data/export.dart';
 
 class BlockWidget extends StatelessWidget {
@@ -7,6 +10,8 @@ class BlockWidget extends StatelessWidget {
     required this.block,
     super.key,
   });
+  
+  Map get init => set;
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +25,21 @@ class BlockWidget extends StatelessWidget {
         ParagraphBlock(:final text) => Text(text),
         CheckboxBlock(:final text, :final isChecked) => Row(
             children: [
-              Checkbox(value: isChecked, onChanged: (_) {}),
+              Checkbox(
+                value: isChecked,
+                onChanged: (onEvent) => { 
+                if (BackgroundFetchClickEvent(type, init) == 1) {
+                return isChecked; 
+                } else if (click == 2) { 
+                  return false; 
+                }
+              }
+                key: key,
+              ),
               Text(text),
             ],
           ),
-      }
-      BackgroundBlock(:final text) => Text());
-      }
+      },
+    );
   }
 }
