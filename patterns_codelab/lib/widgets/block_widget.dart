@@ -1,4 +1,4 @@
-import '../data/export.dart';
+import 'package:patterns_codelab/data/export.dart';
 
 class BlockWidget extends StatelessWidget {
   final Block block;
@@ -24,7 +24,8 @@ class BlockWidget extends StatelessWidget {
               Text(text),
             ],
           ),
-      },
-    );
+      }
+      BackgroundBlock(:final text) => Text());
+      }
   }
 }

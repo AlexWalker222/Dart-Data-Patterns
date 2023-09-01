@@ -1,6 +1,6 @@
-import '../data/export.dart';
+import 'package:patterns_codelab/data/export.dart';
 
-class DocumentScreen extends StatelessWidget {
+class DocumentScreen extends StatefulWidget {
   final Document document;
 
   const DocumentScreen({
@@ -9,10 +9,15 @@ class DocumentScreen extends StatelessWidget {
   });
 
   @override
+  State<DocumentScreen> createState() => _DocumentScreenState();
+}
+
+class _DocumentScreenState extends State<DocumentScreen> {
+  @override
   Widget build(BuildContext context) {
-    final (title, :modified) = document.metadata;
+    final (title, :modified) = widget.document.metadata;
     final formattedModifiedDate = formatDate(modified);
-    final blocks = document.getBlocks();
+    final blocks = widget.document.getBlocks();
 
     return Scaffold(
       appBar: AppBar(
