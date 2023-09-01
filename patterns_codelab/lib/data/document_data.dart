@@ -1,4 +1,4 @@
-import 'package:patterns_codelab/data/export.dart';
+import 'export.dart';
 
 class Document {
   final Map<String, Object?> _json;
